@@ -4,10 +4,11 @@ const express = require('express')
 const app = express()
 const PORT = 5500
 
-// app.use("/", (req, res) => {
-//     console.log("hello world")
-// }) // our routes
 
+
+app.use("/", (req, res) => {
+    res.json({ msg: "hi world" })
+}) // our routes
 app.use("/hi", (req, res) => {
     res.json({ msg: "hi world" })
 }) // our routes
