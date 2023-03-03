@@ -7,7 +7,7 @@ const PORT = 5500
 
 
 app.use("/", (req, res) => {
-    res.json({ msg: "hi world" })
+    res.json({ msg: "hello world" })
 }) // our routes
 app.use("/hi", (req, res) => {
     res.json({ msg: "hi world" })
