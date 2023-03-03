@@ -1,9 +1,21 @@
-const express = require('express')
+const express = require('express');
 const router = express.Router()
+// const { UpdateUser, deleteUser,
+//     getUser, getAllUsers } = require('../controllers/userController');
+// const { verifyToken, verifyUser, verifyAdmin } = require('../utils/verifyToken');
 
+// PUT
+// router.put("/:id", verifyUser, UpdateUser)
 
-router.get('/profile', (req, res) => {
-    res.json({ msg: "user profile" })
+// // DELETE
+// router.delete("/:id", verifyUser, deleteUser)
+
+// // GET single User by id
+// router.get("/:id", verifyUser, getUser)
+
+// GET All Users
+router.get("/", (req, res) => {
+    res.json({ msg: "GET All Users" })
 })
 
 module.exports = router
