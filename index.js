@@ -13,7 +13,7 @@ const PORT = 5500
 // app.use("/hi", (req, res) => {
 //     res.json({ msg: "hi world" })
 // }) // our routes
-app.use("/api/user", userRoute)
+app.use("/user", userRoute)
 // app.use("/api/cart", cartRoute)
 // our routes
 
