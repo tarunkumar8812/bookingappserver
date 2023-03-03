@@ -31,9 +31,6 @@ app.use((err, req, res, next) => {
 
 
 // ROUTES
-app.use("/", (req, res) => {
-    res.json({ msg: "server is working fine" })
-}) // our routes
 app.use("/api/users", userRoute) // our routes
 app.use("/api/auth", authRoute) // our routes
 app.use("/api/hotels", hotelRoute) // our routes
