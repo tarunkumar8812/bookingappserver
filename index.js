@@ -1,6 +1,6 @@
 const express = require('express')
 // const mongoose = require('mongoose')
-
+const testRoutee = require('./routes/routes.js')
 const app = express()
 const PORT = 5500
 
@@ -12,6 +12,8 @@ app.use("/", (req, res) => {
 app.use("/hi", (req, res) => {
     res.json({ msg: "hi world" })
 }) // our routes
+app.use("/bye", testRoutee)
+// our routes
 
 
 
