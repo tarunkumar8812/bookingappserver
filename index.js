@@ -1,7 +1,7 @@
 const express = require('express')
 // const mongoose = require('mongoose')
 const userRoute = require('./routes/cartRoute.js')
-const cartRoute = require('./routes/cartRoute.js')
+// const cartRoute = require('./routes/cartRoute.js')
 const app = express()
 const PORT = 5500
 
