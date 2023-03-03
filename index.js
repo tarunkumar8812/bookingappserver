@@ -1,12 +1,15 @@
 const express = require('express')
 const cors = require('cors')
 const mongoose = require('mongoose')
+const authRoute = require('./routes/authRoute.js')
 const userRoute = require('./routes/userRoute.js')
+const hotelRoute = require('./routes/hotelRoute.js')
+const roomRoute = require('./routes/roomRoute.js')
 const cookieParser = require('cookie-parser')
 const PORT = 5000
 const MONGO_URL = "mongodb+srv://TarunKumar123:xLcX9W1SI9646ftM@cluster1.tpwtwiv.mongodb.net/BookingApp"
-const app = express()
 
+const app = express()
 // is global middleware
 app.use(cors())
 app.use(cookieParser())
@@ -27,9 +30,11 @@ app.use((err, req, res, next) => {
 })
 
 
-
 // ROUTES
 app.use("/api/user", userRoute) // our routes
+app.use("/api/auth", authRoute) // our routes
+app.use("/api/hotel", hotelRoute) // our routes
+app.use("/api/room", roomRoute) // our routes
 
 mongoose
     .connect(MONGO_URL, { useNewUrlParser: true }, mongoose.set('strictQuery', true))
@@ -42,19 +47,3 @@ app.listen(PORT || 5000, (err) => {
     if (err) { throw err.message }
     else { console.log(`espress app running on ${PORT || 5000}`); }
 })
-
-
-
-// const express = require('express')
-// const userRoute = require('./routes/userRoute.js')
-// const cartRoute = require('./routes/cartRoute.js')
-// const app = express()
-// const PORT = 5500
-
-// app.use("/user", userRoute)
-// app.use("/api/cart", cartRoute)
-
-// app.listen(PORT, (err) => {
-//     if (err) { throw err.message }
-//     else { console.log(`espress app running on ${PORT}`); }
-// })
