@@ -4,7 +4,6 @@ const {
     countByCity, countByType } = require('../controllers/hotelController.js')
 const { verifyAdmin } = require("../utils/verifyToken.js")
 const router = express.Router()
-const Hotel = require('../models/hotelModel.js')
 
 // CREATE
 router.post("/", verifyAdmin, creteHotel)
