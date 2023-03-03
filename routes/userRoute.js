@@ -11,7 +11,7 @@ const { UpdateUser, deleteUser,
 // router.delete("/:id", verifyUser, deleteUser)
 
 // // GET single User by id
-// router.get("/:id", verifyUser, getUser)
+router.get("/:id", getUser)
 
 // GET All Users
 router.get("/getUser", getAllUsers)
