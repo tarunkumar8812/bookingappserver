@@ -2,8 +2,8 @@ const express = require('express')
 const router = express.Router()
 
 
-router.get('/cartDetails', (req, res) => {
-    res.json({ msg: "user cart Details" })
+router.get('/profile', (req, res) => {
+    res.json({ msg: "user profile" })
 })
 
 module.exports = router

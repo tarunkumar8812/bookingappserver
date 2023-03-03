@@ -1,7 +1,7 @@
 const express = require('express')
 // const mongoose = require('mongoose')
-const userRoute = require('./routes/cartRoute.js')
-// const cartRoute = require('./routes/cartRoute.js')
+const userRoute = require('./routes/userRoute.js')
+const cartRoute = require('./routes/cartRoute.js')
 const app = express()
 const PORT = 5500
 
@@ -14,7 +14,7 @@ const PORT = 5500
 //     res.json({ msg: "hi world" })
 // }) // our routes
 app.use("/user", userRoute)
-// app.use("/api/cart", cartRoute)
+app.use("/api/cart", cartRoute)
 // our routes
 
 
