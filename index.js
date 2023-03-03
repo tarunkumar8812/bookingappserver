@@ -1,18 +1,20 @@
 const express = require('express')
 // const mongoose = require('mongoose')
-const testRoutee = require('./routes/routes.js')
+const userRoute = require('./routes/cartRoute.js')
+const cartRoute = require('./routes/cartRoute.js')
 const app = express()
 const PORT = 5500
 
 
 
-app.use("/h", (req, res) => {
-    res.json({ msg: "hello world" })
-}) // our routes
-app.use("/hi", (req, res) => {
-    res.json({ msg: "hi world" })
-}) // our routes
-app.use("/bye", testRoutee)
+// app.use("/h", (req, res) => {
+//     res.json({ msg: "hello world" })
+// }) // our routes
+// app.use("/hi", (req, res) => {
+//     res.json({ msg: "hi world" })
+// }) // our routes
+app.use("/api/user", userRoute)
+app.use("/api/cart", cartRoute)
 // our routes
 
 
