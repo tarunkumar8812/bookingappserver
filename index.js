@@ -33,7 +33,7 @@ app.use((err, req, res, next) => {
 // ROUTES
 app.use("/api/users", userRoute) // our routes
 app.use("/api/auth", authRoute) // our routes
-app.use("/api/hotel", hotelRoute) // our routes
+app.use("/api/hotels", hotelRoute) // our routes
 app.use("/api/rooms", roomRoute) // our routes
 
 mongoose
