@@ -3,7 +3,7 @@ const cors = require('cors')
 const mongoose = require('mongoose')
 const userRoute = require('./routes/userRoute.js')
 const cookieParser = require('cookie-parser')
-const PORT = 5500
+const PORT = 5000
 const MONGO_URL = "mongodb+srv://TarunKumar123:xLcX9W1SI9646ftM@cluster1.tpwtwiv.mongodb.net/BookingApp"
 const app = express()
 
