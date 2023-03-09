@@ -7,7 +7,7 @@ async function register(req, res, next) {
     try {
 
 
-        let { username, email, phone, password } = req.body
+        let { name, email, phone, password } = req.body
 
         // let errors = []
         //-----------all validations for fileds -----------
@@ -22,7 +22,7 @@ async function register(req, res, next) {
 
 
         //  ---------checking uniqueness of email ---------
-     
+
         let emailInDb = await User.findOne({ email })
         if (emailInDb) return res.status(409).send({ status: false, message: "Email is already registered!" })
 
@@ -37,7 +37,7 @@ async function register(req, res, next) {
 
 
         const newUser = await User.create({
-            username: username,
+            username: name,
             email: email,
             phone: phone,
             password: hashPassword,
@@ -59,6 +59,7 @@ async function register(req, res, next) {
 async function login(req, res, next) {
 
     try {
+        console.log(req.body);
 
         // finding user in database by emailId
         const user = await User.findOne({ email: req.body.username })
