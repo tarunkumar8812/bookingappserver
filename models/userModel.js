@@ -5,7 +5,6 @@ const UserSchema = new mongoose.Schema(
             type: String,
             required: true,
             trim: true,
-            unique: true
         },
         email: {
             type: String,
@@ -13,8 +12,15 @@ const UserSchema = new mongoose.Schema(
             trim: true,
             unique: true
         },
+        phone: {
+            type: String,
+            required: true,
+            trim: true,
+            unique: true
+        },
         password: {
             type: String,
+            trim: true,
             required: true,
         },
         isAdmin: {
