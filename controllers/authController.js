@@ -59,8 +59,9 @@ async function register(req, res, next) {
 async function login(req, res, next) {
 
     try {
+
         // finding user in database by emailId
-        const user = await User.findOne({ email: req.body.email })
+        const user = await User.findOne({ email: req.body.username })
 
         if (!user) { return res.status(404).send({ status: false, message: "User not found!" }); }
 
